@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Woodie&#39;s Wifi Hotspot : Gives you ability to create your own Wifi Hotspot on your Windows 8/8.1 machine.">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Woodie&#39;s Wifi Hotspot</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/woodiesvk/Woodie-s-Wifi-Hotspot">View on GitHub</a>
+
+          <h1 id="project_title">Woodie&#39;s Wifi Hotspot</h1>
+          <h2 id="project_tagline">Gives you ability to create your own Wifi Hotspot on your Windows 8/8.1 machine.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/woodiesvk/Woodie-s-Wifi-Hotspot/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/woodiesvk/Woodie-s-Wifi-Hotspot/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="woodies-wifi-hotspot" class="anchor" href="#woodies-wifi-hotspot" aria-hidden="true"><span class="octicon octicon-link"></span></a>Woodie's Wifi Hotspot</h1>
+
+<p>Gives you ability to create your own Wifi Hotspot on your <strong>Windows 8/8.1</strong> machine.</p>
+
+<p>Made because "AdHoc" feature was removed from Windows by Microsoft.</p>
+
+<p><strong>If you're running Windows 7 machine</strong>, i recommend you setup AdHoc network with ICS instead of using this tool.</p>
+
+<h3>
+<a id="version-102---first-public-release" class="anchor" href="#version-102---first-public-release" aria-hidden="true"><span class="octicon octicon-link"></span></a>Version 1.0.2 - First Public Release</h3>
+
+<p>Download: <a href="https://github.com/woodiesvk/Woodie-s-Wifi-Hotspot/blob/master/WifiHotspot1020-Compiled.exe?raw=true">https://github.com/woodiesvk/Woodie-s-Wifi-Hotspot/blob/master/WifiHotspot1020-Compiled.exe?raw=true</a>
+Source code: <a href="https://github.com/woodiesvk/Woodie-s-Wifi-Hotspot/blob/master/WifiHotspot1020-Source.bat">https://github.com/woodiesvk/Woodie-s-Wifi-Hotspot/blob/master/WifiHotspot1020-Source.bat</a></p>
+
+<h3>
+<a id="after-you-download-the-app-open-it-use-the-third-option-to-setup-the-network-needs-to-be-done-only-once-and-then-read-what-it-says-so-you-can-enable-internet-sharing" class="anchor" href="#after-you-download-the-app-open-it-use-the-third-option-to-setup-the-network-needs-to-be-done-only-once-and-then-read-what-it-says-so-you-can-enable-internet-sharing" aria-hidden="true"><span class="octicon octicon-link"></span></a>After you download the app, open it, use the third option to setup the network (needs to be done only once), and then READ WHAT IT SAYS SO YOU CAN ENABLE INTERNET SHARING</h3>
+
+<h3>
+<a id="warranty-information" class="anchor" href="#warranty-information" aria-hidden="true"><span class="octicon octicon-link"></span></a>Warranty Information:</h3>
+
+<p><strong>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.</strong></p>
+
+<h2>
+<a id="troubleshooting" class="anchor" href="#troubleshooting" aria-hidden="true"><span class="octicon octicon-link"></span></a>Troubleshooting:</h2>
+
+<h3>
+<a id="check-that-you-can-host-wifi-before-you-download" class="anchor" href="#check-that-you-can-host-wifi-before-you-download" aria-hidden="true"><span class="octicon octicon-link"></span></a>Check that you can host WiFi before you download:</h3>
+
+<p>Open Command Prompt and check if your PC can be a Wifi Hotspot using this command:</p>
+
+<pre><code>netsh wlan show drivers
+</code></pre>
+
+<p>Then look for a line "Hosted network Supported"</p>
+
+<ul>
+<li>Yes means you can host WiFi</li>
+<li>No means you can not host Wifi and that there is no way you can do so through your current WiFi adapter (not even using external apps) - To host Wifi using your PC you will have to buy external Wifi adapter with such capabilities.</li>
+</ul>
+
+<h3>
+<a id="if-you-setup-everything-right-and-you-can-host-wifi-and-it-does-appear-on-other-devices-yet-no-internet-connection-is-shared" class="anchor" href="#if-you-setup-everything-right-and-you-can-host-wifi-and-it-does-appear-on-other-devices-yet-no-internet-connection-is-shared" aria-hidden="true"><span class="octicon octicon-link"></span></a>If you setup everything right and you can host WiFi (and it does appear on other devices), yet no internet connection is shared:</h3>
+
+<ol>
+<li>Hit <strong>Win+R</strong> (Win is the windows logo next to Ctrl and Alt on your keyboard)</li>
+<li>Type <strong>services.msc</strong> into the textbox</li>
+<li>Look for <em>Internet Connection Sharing</em> in the list of services</li>
+<li>Right click, Properties</li>
+<li>Set Startup type to <strong>Automatic (Delayed Start)</strong>
+</li>
+<li>Click OK</li>
+<li>Right click, Stop</li>
+<li>Right click, Start</li>
+<li>Open WifiHotspot app, stop the wifi hotspot (if you haven't done so already)</li>
+<li>Re-open WifiHotspot app again and start the hotspot.</li>
+<li>Internet connection should be shared now through your Wifi, if it isn't, try restarting the PC and starting the hotspot again afterwards.</li>
+</ol>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Woodie&#39;s Wifi Hotspot maintained by <a href="https://github.com/woodiesvk">woodiesvk</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-61532419-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+
+  </body>
+</html>
